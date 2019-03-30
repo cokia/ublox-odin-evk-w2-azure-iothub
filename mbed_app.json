@@ -1,0 +1,25 @@
+{
+      "macros" : [
+        "MBEDTLS_SHA1_C"
+    ],
+    "config": {
+        "main-stack-size": {
+            "value": 8192
+        },
+        "wifi-ssid": {
+            "help": "WiFi SSID",
+            "value": "\"GCAMP\""
+        },
+        "wifi-password": {
+            "help": "WiFi Password",
+            "value": "\"12345678a\""
+        }
+    },
+    "target_overrides": {
+        "*": {
+            "platform.stdio-convert-newlines": true,
+            "platform.stdio-baud-rate": 115200,
+            "mbed-trace.enable": 16
+        }
+    }
+}
